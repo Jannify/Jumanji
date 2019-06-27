@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 54429486168795230}
   - component: {fileID: 54429486168795228}
   - component: {fileID: 54429486168795229}
+  - component: {fileID: 904870485360781005}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -44,11 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190eb540d7444784cae65d7e23d8eb3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  modes: {fileID: 0}
   modePrefabs:
   - {fileID: 8466541257882663244, guid: 5f96999a4369f9341825d6bfe3fb152f, type: 3}
   - {fileID: 8269044802515072157, guid: 48b4895a0d33c2340b3a4436f452370c, type: 3}
   - {fileID: 7699996869355514868, guid: 86946815052d35c42bdaf2dbb1373777, type: 3}
-  selectetMode: 0
+  - {fileID: 8269044802515072157, guid: 48b4895a0d33c2340b3a4436f452370c, type: 3}
 --- !u!114 &54429486168795229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +63,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f786f1043f5cca489f329755ea22b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charFileResources:
+  - {fileID: 4900000, guid: cfbee173f7fa60747b33d777c6aeb9f8, type: 3}
+  - {fileID: 4900000, guid: f4555813b6c2f094e8de6beaab098d6b, type: 3}
   UserDataContainer:
     pin: 
     path: 
+  charFileData:
+    originalText: []
+--- !u!114 &904870485360781005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54429486168795219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d9fbff245dc681429e2cf62daad2bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadePerSecond: 1

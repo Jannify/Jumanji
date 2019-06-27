@@ -1,37 +1,31 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class LockNumbers : baseLockMode
 {
-    private static LockNumbers Main;
+    public int maxNumber;
 
     [SerializeField]
-    private GameObject numberPrefab;
+    private GameObject numberPrefab = default;
 
-    private TextMeshProUGUI[] numbers;
-
-    private int currentNumberSlot = 1;
-
-    void Awake()
-    {
-        Main = this;
-    }
+    private List<TextMeshProUGUI> numbers = new List<TextMeshProUGUI>();
 
     public override void setNextChar(string number)
     {
-        if (Main.currentNumberSlot < Main.numbers.Length)
+        numbers.Add(Instantiate(numberPrefab, transform.GetChild(0)).GetComponentInChildren<TextMeshProUGUI>());
+        numbers.Last().SetText(number);
+
+        if (numbers.Count >= maxNumber)
         {
-            Main.numbers[Main.currentNumberSlot].SetText(number);
-            Main.currentNumberSlot++;
-        }
-        else
-        {
-            Main.numbers[Main.currentNumberSlot].SetText(number);
             string code = "";
-            foreach (TextMeshProUGUI num in Main.numbers)
+            foreach (TextMeshProUGUI num in numbers)
             {
                 code = code + num.text;
+                Destroy(num.transform.parent.gameObject);   
             }
+            numbers.Clear();
             checkPassword(code);
         }
     }

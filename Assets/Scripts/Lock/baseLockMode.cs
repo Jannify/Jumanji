@@ -5,12 +5,14 @@ public abstract class baseLockMode : MonoBehaviour
 
     public virtual void setNextChar(string Char) { }
 
-    public void checkPassword(string password)
+    public bool checkPassword(string password)
     {
-        if (CharFileData.keyText.ContainsKey(password))
+        if (CharFileData.Main.keyText.ContainsKey(password))
         {
             GameController.Main.changeMode(GameMode.PasswordText);
-            GameController.Main.setJumanjiTextDelayed(CharFileData.keyText[password]);
+            GameController.Main.setJumanjiText(CharFileData.Main.keyText[password]);
+            return true;
         }
+        else return false;
     }
 }

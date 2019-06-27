@@ -6,14 +6,20 @@ using UnityEngine;
 public class DataController : MonoBehaviour
 {
     public static DataController Main;
+    [SerializeField]
+    private TextAsset[] charFileResources;
     public UserDataContainer UserDataContainer;
-
+    public CharFileData charFileData;
+         
     public void Awake()
     {
         Main = this;
+        charFileData = new CharFileData();
         UserDataContainer = LoadData<UserDataContainer>("userData");
-        CharFileData.originalText = openCSV(PathForUserDataFile("originalText", ".csv"));
-        CharFileData.keyText = openCSVrows(PathForUserDataFile("riddleText", ".csv"));
+
+        checkCSV();
+        charFileData.originalText = openCSV(PathForUserDataFile("originalText", ".csv"));
+        charFileData.keyText = openCSVrows(PathForUserDataFile("riddleText", ".csv"));
     }
 
     private void OnDisable()
@@ -28,7 +34,7 @@ public class DataController : MonoBehaviour
 
     public T LoadData<T>(string fileName)
     {
-        return LoadDataFromPath<T>(PathForUserDataFile(fileName)); ;
+        return LoadDataFromPath<T>(PathForUserDataFile(fileName));
     }
 
     public T LoadDataFromPath<T>(string filePath)
@@ -75,6 +81,15 @@ public class DataController : MonoBehaviour
         }
     }
 
+    private void checkCSV()
+    {
+        if(!File.Exists(PathForUserDataFile("originalText", ".csv")))
+        {
+            File.WriteAllText(PathForUserDataFile("originalText", ".csv"), charFileResources[0].text);
+            File.WriteAllText(PathForUserDataFile("riddleText", ".csv"), charFileResources[1].text);
+        }
+    }
+
     private Dictionary<string, string> openCSVrows(string path)
     {
         string rawText = File.ReadAllText(path);
@@ -82,10 +97,12 @@ public class DataController : MonoBehaviour
         Dictionary<string, string> text = new Dictionary<string, string>();
         foreach (string line in lines)
         {
-            if (line.Contains(";")) {
+            if (line.Contains(";"))
+            {
                 string[] keyValuePair = line.Split(';');
 
-                text.Add(keyValuePair[0]?.Replace('§', '\n'), keyValuePair[1]?.Replace('§', '\n'));
+                if (keyValuePair[0] != "" && keyValuePair[1] != "")
+                    text.Add(keyValuePair[0]?.Replace('§', '\n'), keyValuePair[1]?.Replace('§', '\n'));
             }
         }
 
@@ -100,7 +117,8 @@ public class DataController : MonoBehaviour
         foreach (string line in lines)
         {
             string[] keyValuePair = line.Split(';');
-            text.Add(keyValuePair[0].Replace('§', '\n'));
+            if (keyValuePair[0] != "")
+                text.Add(keyValuePair[0].Replace('§', '\n'));
         }
 
         return text;

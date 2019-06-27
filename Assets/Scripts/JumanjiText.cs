@@ -1,16 +1,15 @@
-﻿using UnityEngine;
-using System.Collections;
-using BrunoMikoski.TextJuicer;
+﻿//using BrunoMikoski.TextJuicer;
 using TMPro;
+using UnityEngine;
 
 public class JumanjiText : MonoBehaviour
 {
-    private static JumanjiText Main;
+    public static JumanjiText Main;
 
+    //[SerializeField]
+    //public JuicedTextMeshPro textManager;
     [SerializeField]
-    private readonly JuicedTextMeshPro textManager;
-    [SerializeField]
-    private readonly TextMeshProUGUI textField;
+    public TextMeshProUGUI textField;
 
     private void Awake()
     {
@@ -19,12 +18,17 @@ public class JumanjiText : MonoBehaviour
 
     private void Start()
     {
-       // setText(CharFileData.originalText[Random.Range(0, CharFileData.keyText.Count + 1)]);
+        // setText(CharFileData.originalText[Random.Range(0, CharFileData.keyText.Count + 1)]);
     }
 
-    public static void setText(string text)
+    public void setText(string text)
     {
-        Main.textField.text = text;
-        Main.textManager.Play();
+        Main.textField.SetText(text);
+        //Main.textManager.SetDirty();
+    }
+
+    public void play()
+    {
+        //Main.textManager.Play();
     }
 }

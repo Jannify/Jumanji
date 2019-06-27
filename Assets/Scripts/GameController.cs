@@ -5,11 +5,13 @@ public class GameController : MonoBehaviour
 {
     public static GameController Main;
     [SerializeField]
-    private GameObject modes;
+    private GameObject modes = default;
     [SerializeField]
-    private GameObject[] modePrefabs;
-    public GameMode selectetMode;
+    private GameObject[] modePrefabs = default;
+    private GameMode selectetMode;
     private GameObject selectetModeObject;
+
+    public static bool passwordMode = true;
 
     private void Awake()
     {
@@ -21,17 +23,11 @@ public class GameController : MonoBehaviour
         changeMode(GameMode.Menu);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void OnTouch()
     {
-        if (selectetMode == GameMode.Original)
+        if (selectetMode == GameMode.Text)
         {
-            JumanjiText.setText(CharFileData.originalText[Random.Range(0, CharFileData.keyText.Count + 1)]);
+            setJumanjiText(CharFileData.Main.originalText[Random.Range(0, CharFileData.Main.originalText.Count)]);
         }
 
         if (selectetMode == GameMode.PasswordText)
@@ -45,29 +41,42 @@ public class GameController : MonoBehaviour
     {
         if ((int)mode < Main.modePrefabs.Length)
         {
-            Main.selectetMode = mode;
-            Destroy(Main.selectetModeObject);
-            Main.selectetModeObject = Instantiate(Main.modePrefabs[(int)mode], Main.modes.transform);
+            //Main.StopCoroutine("changeModeEnumerator");
+            Main.StartCoroutine(changeModeEnumerator(mode));
         }
     }
-
-    public void setJumanjiTextDelayed(string text)
+    private IEnumerator changeModeEnumerator(GameMode mode)
     {
+        CrossFader.crossFadeCanvasGroup(Main.modes, -1);
+        yield return new WaitForSeconds(0.8f);
+        Main.selectetMode = mode;
+        Destroy(Main.selectetModeObject);
+        Main.selectetModeObject = Instantiate(Main.modePrefabs[(int)mode], Main.modes.transform);
+        CrossFader.crossFadeCanvasGroup(Main.modes, 1);
+    }
+
+    public void setJumanjiText(string text)
+    {
+        //JumanjiText.Main.textManager.Stop();
+        //JumanjiText.Main.textManager.SetProgress(0);
+        //JumanjiText.Main.textManager.SetVerticesDirty();
+        //JumanjiText.Main.play();
+
         StartCoroutine(setJumanjiTextEnumerator(text));
     }
 
     private IEnumerator setJumanjiTextEnumerator(string text)
     {
-        yield return new WaitForSeconds(1.0f);
-        JumanjiText.setText(text);
+        yield return new WaitForSeconds(0.9f);
+        JumanjiText.Main.setText(text);
     }
 }
 
 public enum GameMode
 {
     Menu,
-    Original,
+    Text,
     Password,
-    PasswordText = 1,
+    PasswordText,
     Network
 }

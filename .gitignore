@@ -46,6 +46,12 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+# Custom
+/Assets/Plugins/ConsoleE
+/Assets/Plugins/GitHub
 /Assets/Plugins/Text-Juicer/BaseMeshEffectTMP.cs
 /Assets/Plugins/Text-Juicer/BaseMeshEffectTMP.cs.meta
 /Assets/Font/JUNGLEFE SDF Normal.mat
+/riddleText.csv
+/userData.json
