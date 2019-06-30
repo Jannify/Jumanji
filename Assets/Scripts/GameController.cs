@@ -41,14 +41,13 @@ public class GameController : MonoBehaviour
     {
         if ((int)mode < Main.modePrefabs.Length)
         {
-            //Main.StopCoroutine("changeModeEnumerator");
             Main.StartCoroutine(changeModeEnumerator(mode));
         }
     }
     private IEnumerator changeModeEnumerator(GameMode mode)
     {
         CrossFader.crossFadeCanvasGroup(Main.modes, -1);
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.81f);
         Main.selectetMode = mode;
         Destroy(Main.selectetModeObject);
         Main.selectetModeObject = Instantiate(Main.modePrefabs[(int)mode], Main.modes.transform);
@@ -67,7 +66,7 @@ public class GameController : MonoBehaviour
 
     private IEnumerator setJumanjiTextEnumerator(string text)
     {
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.81f);
         JumanjiText.Main.setText(text);
     }
 }
@@ -77,6 +76,5 @@ public enum GameMode
     Menu,
     Text,
     Password,
-    PasswordText,
-    Network
+    PasswordText
 }

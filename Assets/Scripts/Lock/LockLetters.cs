@@ -1,5 +1,4 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class LockLetters : baseLockMode
@@ -14,9 +13,9 @@ public class LockLetters : baseLockMode
 
     public void checkLetterPassword(string password)
     {
-        if(!checkPassword(password))
+        if (!checkPassword(password))
         {
-            Debug.Log("No key found.");
+            Debug.Log(password + "No key found.");
             inputField.text = "";
         }
     }

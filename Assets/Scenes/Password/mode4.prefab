@@ -80,6 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4563932438981886300}
   - component: {fileID: 8809662511394507810}
+  - component: {fileID: 6329011875258874482}
   m_Layer: 0
   m_Name: mode4
   m_TagString: Untagged
@@ -118,6 +119,18 @@ MonoBehaviour:
   maxNumber: 4
   numberPrefab: {fileID: 8200462621012227262, guid: 1c19921b8f8ea2f48a48beffb779a31e,
     type: 3}
+--- !u!225 &6329011875258874482
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3076919903319092193}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7790373342769142586
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,11 +199,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2457525568088475630}
     m_Modifications:
-    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_Name
-      value: KeyboardSlot (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 9040812782043086556, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -296,30 +304,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 71.95
+      propertyPath: m_Name
+      value: KeyboardSlot (9)
       objectReference: {fileID: 0}
     - target: {fileID: 749394863808413647, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
@@ -356,6 +344,31 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 71.95
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4e5e6d2148412940bc38700ef5284ac, type: 3}
 --- !u!224 &8292978418430986931 stripped
@@ -371,11 +384,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2457525568088475630}
     m_Modifications:
-    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_Name
-      value: KeyboardSlot (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 9040812782043086556, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -481,35 +489,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 71.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_text
-      value: 0
+      propertyPath: m_Name
+      value: KeyboardSlot (10)
       objectReference: {fileID: 0}
     - target: {fileID: 749394863808413647, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
@@ -546,6 +529,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 71.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4e5e6d2148412940bc38700ef5284ac, type: 3}
 --- !u!224 &7249038055824684137 stripped
@@ -561,11 +574,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2457525568088475630}
     m_Modifications:
-    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_Name
-      value: KeyboardSlot (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 9040812782043086556, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -671,35 +679,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 71.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_text
-      value: 6
+      propertyPath: m_Name
+      value: KeyboardSlot (6)
       objectReference: {fileID: 0}
     - target: {fileID: 749394863808413647, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
@@ -736,6 +719,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 71.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_text
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4e5e6d2148412940bc38700ef5284ac, type: 3}
 --- !u!224 &6259943131007679250 stripped
@@ -751,11 +764,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2457525568088475630}
     m_Modifications:
-    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_Name
-      value: KeyboardSlot (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 9040812782043086556, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -861,35 +869,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 71.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_text
-      value: 3
+      propertyPath: m_Name
+      value: KeyboardSlot (3)
       objectReference: {fileID: 0}
     - target: {fileID: 749394863808413647, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
@@ -926,6 +909,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 71.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_text
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4e5e6d2148412940bc38700ef5284ac, type: 3}
 --- !u!224 &6254156072164796338 stripped
@@ -941,11 +954,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2457525568088475630}
     m_Modifications:
-    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_Name
-      value: KeyboardSlot (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 9040812782043086556, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1051,35 +1059,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 71.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_text
-      value: 1
+      propertyPath: m_Name
+      value: KeyboardSlot (1)
       objectReference: {fileID: 0}
     - target: {fileID: 749394863808413647, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
@@ -1116,6 +1099,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 71.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_text
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4e5e6d2148412940bc38700ef5284ac, type: 3}
 --- !u!224 &4641885815529490858 stripped
@@ -1131,11 +1144,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2457525568088475630}
     m_Modifications:
-    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_Name
-      value: KeyboardSlot (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 9040812782043086556, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1241,35 +1249,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 71.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_text
-      value: 5
+      propertyPath: m_Name
+      value: KeyboardSlot (5)
       objectReference: {fileID: 0}
     - target: {fileID: 749394863808413647, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
@@ -1306,6 +1289,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 71.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_text
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4e5e6d2148412940bc38700ef5284ac, type: 3}
 --- !u!224 &2454020414557365971 stripped
@@ -1321,11 +1334,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2457525568088475630}
     m_Modifications:
-    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_Name
-      value: KeyboardSlot (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 9040812782043086556, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1431,35 +1439,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 71.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_text
-      value: 8
+      propertyPath: m_Name
+      value: KeyboardSlot (8)
       objectReference: {fileID: 0}
     - target: {fileID: 749394863808413647, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
@@ -1496,6 +1479,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 71.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_text
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4e5e6d2148412940bc38700ef5284ac, type: 3}
 --- !u!224 &2123956506561702201 stripped
@@ -1511,11 +1524,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2457525568088475630}
     m_Modifications:
-    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_Name
-      value: KeyboardSlot (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 9040812782043086556, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1621,35 +1629,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 71.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_text
-      value: 4
+      propertyPath: m_Name
+      value: KeyboardSlot (4)
       objectReference: {fileID: 0}
     - target: {fileID: 749394863808413647, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
@@ -1686,6 +1669,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 71.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_text
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4e5e6d2148412940bc38700ef5284ac, type: 3}
 --- !u!224 &1768962973091618146 stripped
@@ -1701,11 +1714,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2457525568088475630}
     m_Modifications:
-    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_Name
-      value: KeyboardSlot (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 9040812782043086556, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1811,35 +1819,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 71.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_text
-      value: 2
+      propertyPath: m_Name
+      value: KeyboardSlot (2)
       objectReference: {fileID: 0}
     - target: {fileID: 749394863808413647, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
@@ -1876,6 +1859,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 71.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_text
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4e5e6d2148412940bc38700ef5284ac, type: 3}
 --- !u!224 &1890441790634715083 stripped
@@ -1891,11 +1904,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2457525568088475630}
     m_Modifications:
-    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_Name
-      value: KeyboardSlot (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 9040812782043086556, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2001,35 +2009,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+    - target: {fileID: 2484230314139680743, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 71.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
-        type: 3}
-      propertyPath: m_text
-      value: 7
+      propertyPath: m_Name
+      value: KeyboardSlot (7)
       objectReference: {fileID: 0}
     - target: {fileID: 749394863808413647, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
@@ -2064,6 +2047,36 @@ PrefabInstance:
     - target: {fileID: 749394863808413647, guid: a4e5e6d2148412940bc38700ef5284ac,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 71.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 586516941055621410, guid: a4e5e6d2148412940bc38700ef5284ac,
+        type: 3}
+      propertyPath: m_text
       value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []

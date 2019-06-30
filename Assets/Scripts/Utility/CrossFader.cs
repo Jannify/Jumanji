@@ -16,8 +16,17 @@ public class CrossFader : MonoBehaviour
 
     public static void crossFadeCanvasGroup(GameObject gameObject, int direction)
     {
-        if (gameObject.GetComponent<CanvasGroup>())
-            Main.fadingObjects.Add(gameObject.GetComponent<CanvasGroup>(), direction);
+        if (gameObject?.GetComponent<CanvasGroup>() != null)
+        {
+            CanvasGroup canvas = gameObject.GetComponent<CanvasGroup>();
+            if (canvas != null)
+            {
+                canvas.alpha = direction == 1 ? 0 : 1;
+                if (!Main.fadingObjects.ContainsKey(canvas)) Main.fadingObjects.Add(canvas, direction);
+                else Main.fadingObjects[canvas] = direction;
+            }
+        }
+        else Debug.LogError(gameObject + "  has no CanvasGroup");
     }
 
     public static void crossFadeCanvasGroup(CanvasGroup canvasGroup, int direction)
@@ -32,6 +41,10 @@ public class CrossFader : MonoBehaviour
             List<CanvasGroup> toRemove = new List<CanvasGroup>();
             foreach (KeyValuePair<CanvasGroup, int> obj in fadingObjects)
             {
+                if(obj.Key == null)
+                {
+                    toRemove.Add(obj.Key);
+                }
                 obj.Key.alpha += FadePerSecond * obj.Value * Time.deltaTime;
                 if (obj.Value == 1 && obj.Key.alpha >= 1) toRemove.Add(obj.Key);
                 else if (obj.Value == -1 && obj.Key.alpha <= 0) toRemove.Add(obj.Key);

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using TMPro;
 using UnityEngine;
 
 public class LockNumbers : baseLockMode
@@ -10,23 +9,30 @@ public class LockNumbers : baseLockMode
     [SerializeField]
     private GameObject numberPrefab = default;
 
-    private List<TextMeshProUGUI> numbers = new List<TextMeshProUGUI>();
+    private List<Number> numbers = new List<Number>();
+
 
     public override void setNextChar(string number)
     {
-        numbers.Add(Instantiate(numberPrefab, transform.GetChild(0)).GetComponentInChildren<TextMeshProUGUI>());
-        numbers.Last().SetText(number);
+        GameObject nextChar = Instantiate(numberPrefab, transform.GetChild(0));
+        CrossFader.crossFadeCanvasGroup(nextChar, 1);
+        numbers.Add(nextChar.GetComponent<Number>());
+        numbers.Last().SetNumber(number);
 
         if (numbers.Count >= maxNumber)
         {
             string code = "";
-            foreach (TextMeshProUGUI num in numbers)
+            foreach (Number num in numbers)
             {
-                code = code + num.text;
-                Destroy(num.transform.parent.gameObject);   
+                code += num.number;
+                CrossFader.crossFadeCanvasGroup(num.gameObject, -1);
+                Destroy(num.gameObject, 1.0f);
+            }
+            if (!checkPassword(code))
+            {
+                Debug.LogWarning(code + " No key found.");
             }
             numbers.Clear();
-            checkPassword(code);
         }
     }
 }

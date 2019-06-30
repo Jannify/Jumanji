@@ -10,21 +10,25 @@ public class JumanjiText : MonoBehaviour
     //public JuicedTextMeshPro textManager;
     [SerializeField]
     public TextMeshProUGUI textField;
+    [SerializeField]
+    public TMP_FontAsset fallBackFont;
+    [SerializeField]
+    public Material fallBackMaterial;
 
     private void Awake()
     {
         Main = this;
     }
 
-    private void Start()
-    {
-        // setText(CharFileData.originalText[Random.Range(0, CharFileData.keyText.Count + 1)]);
-    }
-
     public void setText(string text)
     {
-        Main.textField.SetText(text);
-        //Main.textManager.SetDirty();
+        if (text.Contains("§"))
+        {
+            textField.font = fallBackFont;
+            textField.material = fallBackMaterial;
+            text = text.Replace("§", "");
+        }
+        Main.textField.SetText(text.ToUpper());
     }
 
     public void play()

@@ -10,21 +10,21 @@ public class DataController : MonoBehaviour
     private TextAsset[] charFileResources;
     public UserDataContainer UserDataContainer;
     public CharFileData charFileData;
-         
+
     public void Awake()
     {
         Main = this;
         charFileData = new CharFileData();
-        UserDataContainer = LoadData<UserDataContainer>("userData");
+        //UserDataContainer = LoadData<UserDataContainer>("userData");
 
-        checkCSV();
-        charFileData.originalText = openCSV(PathForUserDataFile("originalText", ".csv"));
+        CheckCSV();
+        charFileData.originalText = OpenCSV(PathForUserDataFile("originalText", ".csv"));
         charFileData.keyText = openCSVrows(PathForUserDataFile("riddleText", ".csv"));
     }
 
     private void OnDisable()
     {
-        SaveConfigData(UserDataContainer, "userData");
+        //SaveConfigData(UserDataContainer, "userData");
     }
 
     private void OnApplicationQuit()
@@ -62,14 +62,13 @@ public class DataController : MonoBehaviour
 
     public void SaveDataFromPath<T>(T saveData, string filePath)
     {
-        string text = "";
         try
         {
             if (!File.Exists(filePath))
             {
                 File.Create(filePath).Dispose();
             }
-            text = JsonUtility.ToJson(saveData, true);
+            string text = JsonUtility.ToJson(saveData, true);
             if (File.ReadAllText(filePath) != text)
             {
                 File.WriteAllText(filePath, text);
@@ -81,9 +80,9 @@ public class DataController : MonoBehaviour
         }
     }
 
-    private void checkCSV()
+    private void CheckCSV()
     {
-        if(!File.Exists(PathForUserDataFile("originalText", ".csv")))
+        if (!File.Exists(PathForUserDataFile("ToriginalText", ".csv")))
         {
             File.WriteAllText(PathForUserDataFile("originalText", ".csv"), charFileResources[0].text);
             File.WriteAllText(PathForUserDataFile("riddleText", ".csv"), charFileResources[1].text);
@@ -92,7 +91,7 @@ public class DataController : MonoBehaviour
 
     private Dictionary<string, string> openCSVrows(string path)
     {
-        string rawText = File.ReadAllText(path);
+        string rawText = File.ReadAllText(path, System.Text.Encoding.UTF8);
         string[] lines = rawText.Split('\n');
         Dictionary<string, string> text = new Dictionary<string, string>();
         foreach (string line in lines)
@@ -102,14 +101,14 @@ public class DataController : MonoBehaviour
                 string[] keyValuePair = line.Split(';');
 
                 if (keyValuePair[0] != "" && keyValuePair[1] != "")
-                    text.Add(keyValuePair[0]?.Replace('§', '\n'), keyValuePair[1]?.Replace('§', '\n'));
+                    text.Add(keyValuePair[0].Replace("$", "\n"), keyValuePair[1].Replace("$", "\n"));
             }
         }
 
         return text;
     }
 
-    private List<string> openCSV(string path)
+    private List<string> OpenCSV(string path)
     {
         string rawText = File.ReadAllText(path);
         string[] lines = rawText.Split('\n');
@@ -118,7 +117,7 @@ public class DataController : MonoBehaviour
         {
             string[] keyValuePair = line.Split(';');
             if (keyValuePair[0] != "")
-                text.Add(keyValuePair[0].Replace('§', '\n'));
+                text.Add(keyValuePair[0].Replace("$", Environment.NewLine));
         }
 
         return text;
@@ -132,7 +131,7 @@ public class DataController : MonoBehaviour
 
     public static string PathForUserDataFile(string filename, string type = ".json")
     {
-        string path = "";
+        string path;
         if (Application.platform == RuntimePlatform.Android) path = Application.persistentDataPath;
         else path = Application.dataPath;
         return path.Substring(0, path.LastIndexOf('/')) + "/" + filename + type;
