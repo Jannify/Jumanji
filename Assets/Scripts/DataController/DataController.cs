@@ -82,7 +82,7 @@ public class DataController : MonoBehaviour
 
     private void CheckCSV()
     {
-        if (!File.Exists(PathForUserDataFile("ToriginalText", ".csv")))
+        if (!File.Exists(PathForUserDataFile("originalText", ".csv")))
         {
             File.WriteAllText(PathForUserDataFile("originalText", ".csv"), charFileResources[0].text);
             File.WriteAllText(PathForUserDataFile("riddleText", ".csv"), charFileResources[1].text);
